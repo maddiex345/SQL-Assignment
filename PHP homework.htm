@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Untitled</title>
+</head>
+<body>
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "madeline barrios";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT Color , Number_of_Balloons, Deflated_or_Inflated FROM balloons";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+     
+     while($row = $result->fetch_assoc()) {
+         echo "<br> Color: ". $row["Color"]. " - Number: ". $row["Number_of_Balloons"]. " " . $row["Deflated_or_Inflated"] . "<br>";
+     }
+} else {
+     echo "0 results";
+}
+
+$conn->close();
+?>  
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["MySQL"]);?>">  
+  Color: <input type="text" name="Color" >
+  <br><br>
+  Number of Balloons: <input type="text" name="Number_of_Balloons" >
+  <br><br>
+  Deflated or Inflated: <input type="text" name="Deflated_or_Inflated" >
+  <br><br>
+  Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+	
+</form>
+<?php
+echo "<h2>Your Input:</h2>";
+echo $Color;
+echo "<br>";
+echo $Number_of_balloons;
+echo "<br>";
+echo $Deflated_or_Inflated;
+echo "<br>";
+echo $comment;
+echo "<br>";
+?>
+</body>
+</html>
