@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>Untitled</title>
+</head>
+<body>
+
+
+ 
+<form>
+<?php (isset($_POST["Color"])) ? $Color = $_POST["Color"] : $Color=Color1;(isset($_POST["Number_of_Balloons"])) ? $Number_of_Balloons = $_POST["Number_of_Balloons"] : $Number_of_Balloons=Number_of_Balloons1;(isset($_POST["Deflated_or_Inflated"])) ? $Deflated_or_Inflated = $_POST["Deflated_or_Inflated"] : $Deflated_or_Inflated=Deflated_or_Inflated1; ?>
+<select id="Color" name="Color"> 
+<option <?php if ($Color == Color1 ) echo 'selected' ; ?>value="Color1">Blue</option>
+<option <?php if ($Color == Color2 ) echo 'selected' ; ?>value="Color2">Red</option>
+<option <?php if ($Color == Color3 ) echo 'selected' ; ?>value="Color3">Green</option>
+<option <?php if ($Color == Color4 ) echo 'selected' ; ?>value="Color4">Purple</option>
+<option <?php if ($Color == Color5 ) echo 'selected' ; ?>value="Color5">Orange</option>
+<option <?php if ($Color == Color6 ) echo 'selected' ; ?>value="Color6">Yellow</option>
+</select>
+
+<select id="Number_of_Balloons" name="Number_of_Balloons"> 
+<option <?php if ($Number_of_Balloons == Number_of_Balloons1 ) echo 'selected' ; ?> value="Number_of_Balloons1">1</option>
+<option <?php if ($Number_of_Balloons == Number_of_Balloons2 ) echo 'selected' ; ?> value="Number_of_Balloons2">2</option>
+<option <?php if ($Number_of_Balloons == Number_of_Balloons3 ) echo 'selected' ; ?> value="Number_of_Balloons3">3</option>
+<option <?php if ($Number_of_Balloons == Number_of_Balloons4 ) echo 'selected' ; ?> value="Number_of_Balloons4">4</option>
+<option <?php if ($Number_of_Balloons == Number_of_Balloons5 ) echo 'selected' ; ?> value="Number_of_Balloons5">5</option>
+<option <?php if ($Number_of_Balloons == Number_of_Balloons6 ) echo 'selected' ; ?>  value="Number_of_Balloons6">6</option>
+<option <?php if ($Number_of_Balloons == Number_of_Balloons7 ) echo 'selected' ; ?> value="Number_of_Balloons7">7</option>
+<option <?php if ($Number_of_Balloons == Number_of_Balloons8 ) echo 'selected' ; ?> value="Number_of_Balloons8">8</option>
+<option <?php if ($Number_of_Balloons == Number_of_Balloons9 ) echo 'selected' ; ?>  value="Number_of_Balloons9">9</option>
+<option <?php if ($Number_of_Balloons == Number_of_Balloons10 ) echo 'selected' ; ?> value="Number_of_Balloons10">10</option>
+</select>
+
+<select id="Deflated_or_Inflated" name="Deflated_or_Inflated">
+<option <?php if ($Deflated_or_Inflated == Deflated_or_Inflated1 ) echo 'selected' ; ?>value="Deflated_or_Inflated1">Inflated</option>
+<option <?php if ($Deflated_or_Inflated == Deflated_or_Inflated2 ) echo 'selected' ; ?>value="Deflated_or_Inflated2">Deflated</option>
+</select>
+</form>
+</body>
+</html>
